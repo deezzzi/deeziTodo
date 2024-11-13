@@ -1,57 +1,92 @@
-# TodoMvc
+# EaziTodo
 
 ## Description
 
-This application was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+EaziTodo is a simple yet powerful task management application built with [Angular](https://angular.dev) version 17.0.5. This application allows users to create, read, update, and delete tasks efficiently, providing a clean and user-friendly interface for managing daily activities.
 
-[Angular](https://angular.dev) is a development platform, built on TypeScript. As a platform, Angular includes:
+## Features
 
-- A component-based framework for building scalable web applications
-- A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more
-- A suite of developer tools to help you develop, build, test, and update your code
+- **Add Tasks**: Easily add new tasks to your todo list.
+- **Edit Tasks**: Modify existing tasks to update their details.
+- **Delete Tasks**: Remove tasks that are no longer needed.
+- **Toggle Completion**: Mark tasks as complete or incomplete.
+- **Filter Tasks**: View all tasks, only active tasks, or completed tasks.
+- **Responsive Design**: Works seamlessly on both desktop and mobile devices.
 
-With Angular, you're taking advantage of a platform that can scale from single-developer projects to enterprise-level applications. Angular is designed to make updating as straightforward as possible, so take advantage of the latest developments with minimal effort. Best of all, the Angular ecosystem consists of a diverse group of over 1.7 million developers, library authors, and content creators.
+## Technologies Used
 
-## Implementation details
+- **Frontend**: Angular 17.0.5
+- **Styling**: CSS, with styles sourced from [todomvc-app.css](https://www.npmjs.com/package/todomvc-app-css) and [todomvc-common](https://www.npmjs.com/package/todomvc-common).
+- **Routing**: Hash routing for consistent navigation.
 
-In Angular, a service can make data and code available to other components, which lends itself to take on the responsiblity of the model. In this case, the todos service handles all CRUD operations of the todos data. 
-This application is also organized in components, to allow a modular design of the header, footer and content (todo list + todo items). Each component folder contains a html file for the view and a ts file to act as a controller.
+## Installation
 
-Angular:\
-Model: todos.service\
-View: Angular component's html\
-ViewModel: Angular component's ts
+To set up the project locally, follow these steps:
 
-MVC:\
-Model: maintains the data and behavior of an application\
-View: displays the model in the ui\
-Controller: serves as an interface between view & model components
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/eazitodo.git
+   cd eazitodo
+   ```
 
-## TodoMVC specific details
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-- All styles are included from local packages: [todomvc-app.css](https://www.npmjs.com/package/todomvc-app-css) & [todomvc-common](https://www.npmjs.com/package/todomvc-common).
-- A hash router was used to ensure the app has consistent behavior with other apps.
+3. **Run the development server**:
+   ```bash
+   ng serve
+   ```
 
-## Development server
+4. **Open your browser** and navigate to `http://localhost:4200/`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Usage
 
-## Code scaffolding
+Once the application is running, you can:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Add a new task** by typing in the input field and pressing Enter.
+- **Edit a task** by clicking on it and modifying the text.
+- **Delete a task** by clicking the delete button next to it.
+- **Toggle the completion status** by clicking the checkbox next to the task.
+- **Filter tasks** using the provided options to view all, active, or completed tasks.
 
-## Build
+## Code Structure
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The application is organized into components, services, and models, following Angular best practices:
 
-## Running unit tests
+- **Components**: Each component has its own folder containing the HTML, CSS, and TypeScript files.
+  - `todo-list`: Displays the list of todos.
+  - `todo-item`: Represents a single todo item.
+  - `header`: Contains the application header.
+  - `footer`: Contains the application footer.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Services**: The `todos.service.ts` handles all CRUD operations for the todo data.
 
-## Running end-to-end tests
+- **Models**: The `todo.model.ts` defines the structure of a todo item.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Running Tests
 
-## Further help
+To ensure the application works as expected, you can run unit tests and end-to-end tests:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Unit Tests**:
+  ```bash
+  ng test
+  ```
+
+- **End-to-End Tests**:
+  ```bash
+  ng e2e
+  ```
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Further Help
+
+For more help with the Angular CLI, use:
